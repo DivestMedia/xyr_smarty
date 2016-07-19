@@ -1,0 +1,3 @@
+#With mod_rewrite
+RewriteEngine on
+RewriteRule "^/?(.*)"  "/smarty/HTML/ajax/$1"  [R,L]
