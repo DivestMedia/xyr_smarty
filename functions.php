@@ -343,7 +343,7 @@ class xyren_smarty_walker_nav_menu extends Walker_Nav_Menu {
 
 
 	// add main/sub classes to li's and links
-	function start_el(&$output, $page, $depth = 0, $args = array(), $current_page = 0) {
+	function start_el(&$output, $page, $depth = 0, $args = [], $current_page = 0) {
 		global $wp_query;
 		$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
 
@@ -359,40 +359,40 @@ class xyren_smarty_walker_nav_menu extends Walker_Nav_Menu {
 
 
 
-		$active = $item->current ? ' active' : '';
+		$active = $page->current ? ' active' : '';
 
 		// passed classes
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
+		$classes = empty( $page->classes ) ? array() : (array) $page->classes;
+		$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $page ) ) );
 
 		// build html
-		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . ' '. $active .'">';
+		$output .= $indent . '<li id="nav-menu-item-'. $page->ID . '" class="' . $depth_class_names . ' ' . $class_names . ' '. $active .'">';
 
 		// link attributes
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-		$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-		$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+		$attributes  = ! empty( $page->attr_title ) ? ' title="'  . esc_attr( $page->attr_title ) .'"' : '';
+		$attributes .= ! empty( $page->target )     ? ' target="' . esc_attr( $page->target     ) .'"' : '';
+		$attributes .= ! empty( $page->xfn )        ? ' rel="'    . esc_attr( $page->xfn        ) .'"' : '';
 
-		$children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $item->ID));
+		$children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $page->ID));
 		if( !empty($children )){
 			$attributes .= ' class="dropdown-toggle"';
 			$attributes .= ' href="#"';
 		}else{
-			$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+			$attributes .= ! empty( $page->url )        ? ' href="'   . esc_attr( $page->url        ) .'"' : '';
 			$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
 		}
 
 
-		$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+		$page_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
 		$args->before,
 		$attributes,
 		$args->link_before,
-		apply_filters( 'the_title', $item->title, $item->ID ),
+		apply_filters( 'the_title', $page->title, $page->ID ),
 		$args->link_after,
 		$args->after);
 
 		// build html
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id);
+		$output .= apply_filters( 'walker_nav_menu_start_el', $page_output, $page, $depth, $args, $current_page);
 	}
 
 
