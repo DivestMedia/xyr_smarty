@@ -382,14 +382,17 @@ class xyren_smarty_walker_nav_menu extends Walker_Nav_Menu {
 			$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
 		}
 
-
+		if(!is_array($args)){
+			$args = (array)$args;
+		}
+		
 		$page_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
-		$args->before,
+		$args['before'],
 		$attributes,
-		$args->link_before,
+		$args['link_before'],
 		apply_filters( 'the_title', $page->title, $page->ID ),
-		$args->link_after,
-		$args->after);
+		$args['link_after'],
+		$args['after']);
 
 		// build html
 		$output .= apply_filters( 'walker_nav_menu_start_el', $page_output, $page, $depth, $args, $current_page);
