@@ -101,7 +101,7 @@ function bootstrapsmarty_setup() {
 		}
 
 		wp_deregister_script('jquery');
-		wp_register_script( 'jquery', get_template_directory_uri() . '/assets/plugins/jquery/jquery-2.1.4.min.js','', '2.1.4');
+		wp_register_script( 'jquery', get_template_directory_uri() . '/assets/plugins/jquery/jquery-2.2.3.min.js','', '2.2.3');
 
 		wp_enqueue_script( 'xyr_smarty-script', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), null, true );
 
