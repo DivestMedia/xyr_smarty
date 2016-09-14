@@ -40,9 +40,12 @@ function xyr_smarty_field_twitter_url(){
 	xyr_smarty_field('twitter_url');
 }
 
-
 function xyr_smarty_field_facebook_url(){
 	xyr_smarty_field('facebook_url');
+}
+
+function xyr_smarty_field_youtube_api_key(){
+	xyr_smarty_field('youtube_api_key');
 }
 
 function xyr_smarty_field_copyright_text(){
@@ -59,6 +62,7 @@ function display_theme_panel_fields(){
 	$_data_fields = array(
 		array('twitter_url','Twitter Profile Url'),
 		array('facebook_url','Facebook Profile Url'),
+		array('youtube_api_key','Youtube API Key'),
 		array('copyright_text','Copyright Text'),
 		array('disclaimer','Disclaimer')
 	);
