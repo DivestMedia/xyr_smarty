@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 				endif; ?>
 				
 				<h4 class="page-header margin-bottom-60 size-20">
-					<? comments_number('NO COMMENT', '<span>1</span> COMMENT', '<span>%</span> COMMENTS'); ?>
+					<?php comments_number('NO COMMENT', '<span>1</span> COMMENT', '<span>%</span> COMMENTS'); ?>
 				</h4>
 				
 				

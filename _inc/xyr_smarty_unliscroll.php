@@ -143,7 +143,7 @@ function xyr_unliscroll_home(){
 			ias.extension(new IASNoneLeftExtension({text: "You reached the end"}));
 			jQuery.ias().extension(new IASPagingExtension());
 			jQuery.ias().on('pageChange', function(pageNum, scrollOffset, url) {
-				var page_title = 'Page: '  + pageNum + ' | <? bloginfo();?> | <? bloginfo('description');?>';
+				var page_title = 'Page: '  + pageNum + ' | <?php bloginfo();?> | <?php bloginfo('description');?>';
 				history.pushState('home-scroll', page_title , url);
 				document.title = page_title ;
 			});

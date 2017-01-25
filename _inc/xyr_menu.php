@@ -88,31 +88,31 @@ function global_custom_options(){
 		?>	
 			
 		
-		<h3><? _e('Company Info',XYR_SMARTY);?></h3>
+		<h3><?php _e('Company Info',XYR_SMARTY);?></h3>
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row"><? _e('Company Name (max 8)',XYR_SMARTY);?></th>
-				<td><input name="_xyr_smarty[company_info][name_small]" maxlength="8" type="text" value="<? esc_attr_e($_xyr_smarty['company_info']['name_small']);?>" class="regular-text" />
+				<th scope="row"><?php _e('Company Name (max 8)',XYR_SMARTY);?></th>
+				<td><input name="_xyr_smarty[company_info][name_small]" maxlength="8" type="text" value="<?php esc_attr_e($_xyr_smarty['company_info']['name_small']);?>" class="regular-text" />
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><? _e('Description',XYR_SMARTY);?></th>
-				<td><input name="_xyr_smarty[company_info][description]" type="text" value="<? esc_attr_e($_xyr_smarty['company_info']['description']);?>" class="large-text" />
+				<th scope="row"><?php _e('Description',XYR_SMARTY);?></th>
+				<td><input name="_xyr_smarty[company_info][description]" type="text" value="<?php esc_attr_e($_xyr_smarty['company_info']['description']);?>" class="large-text" />
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><? _e('Office Address',XYR_SMARTY);?></th>
-				<td><textarea name="_xyr_smarty[company_info][address]" rows="3" class="large-text"><? esc_attr_e($_xyr_smarty['company_info']['address']); ?></textarea>
+				<th scope="row"><?php _e('Office Address',XYR_SMARTY);?></th>
+				<td><textarea name="_xyr_smarty[company_info][address]" rows="3" class="large-text"><?php esc_attr_e($_xyr_smarty['company_info']['address']); ?></textarea>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><? _e('Phone',XYR_SMARTY);?></th>
-				<td><input name="_xyr_smarty[company_info][phone]" type="text" value="<? esc_attr_e($_xyr_smarty['company_info']['phone']);?>" class="regular-text" />
+				<th scope="row"><?php _e('Phone',XYR_SMARTY);?></th>
+				<td><input name="_xyr_smarty[company_info][phone]" type="text" value="<?php esc_attr_e($_xyr_smarty['company_info']['phone']);?>" class="regular-text" />
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><? _e('Support Email',XYR_SMARTY);?></th>
-				<td><input name="_xyr_smarty[company_info][support]" type="text" value="<? esc_attr_e($_xyr_smarty['company_info']['support']);?>" class="regular-text" />
+				<th scope="row"><?php _e('Support Email',XYR_SMARTY);?></th>
+				<td><input name="_xyr_smarty[company_info][support]" type="text" value="<?php esc_attr_e($_xyr_smarty['company_info']['support']);?>" class="regular-text" />
 				</td>
 			</tr>
 			
@@ -121,7 +121,7 @@ function global_custom_options(){
 		<table class="form-table">
 			<tr valign="top">
 				<th scope="row">Address</th>
-				<td><input name="_xyr_smarty[saved]" type="text" value="<? esc_attr_e($_xyr_smarty['saved']);?>" class="regular-text" />
+				<td><input name="_xyr_smarty[saved]" type="text" value="<?php esc_attr_e($_xyr_smarty['saved']);?>" class="regular-text" />
 				</td>
 			</tr>
 		</table>

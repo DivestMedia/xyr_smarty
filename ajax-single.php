@@ -17,7 +17,7 @@ get_header();
 				<!-- breadcrumbs -->
 				<ol class="breadcrumb breadcrumb-inverse">
 					<li><a href="<?=site_url();?>">Home</a></li>
-					<li class="active"><? the_title();?></li>
+					<li class="active"><?php the_title();?></li>
 				</ol><!-- /breadcrumbs -->
 
 			</div>
@@ -84,7 +84,7 @@ get_header();
 								<!-- /IMAGE -->';
 							}?>
 
-							<h2 class="blog-post-title uppercase"><a href="<? the_permalink();?>"><?php the_title(); ?></a></h2>
+							<h2 class="blog-post-title uppercase"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
 
 							<ul class="blog-post-info list-inline">
 								<li>
@@ -93,7 +93,7 @@ get_header();
 										<span class="font-lato"><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></span>
 									</a>
 								</li>
-								<? 
+								<?php 
 								
 								if ( $post->comment_count > 0 ): ?>
 								<li>
@@ -111,9 +111,9 @@ get_header();
 								</li>
 								
 								<li>
-									<a href="<? echo esc_url( get_author_posts_url(get_the_author_meta('ID')) );?>">
+									<a href="<?php echo esc_url( get_author_posts_url(get_the_author_meta('ID')) );?>">
 										<i class="fa fa-user"></i> 
-										<span class="font-lato"><? the_author();?></span>
+										<span class="font-lato"><?php the_author();?></span>
 									</a>
 								</li>
 								
@@ -124,7 +124,7 @@ get_header();
 							<?php the_excerpt(); ?>
 							
 							
-							<a href="<? the_permalink();?>" class="btn btn-reveal btn-default">
+							<a href="<?php the_permalink();?>" class="btn btn-reveal btn-default">
 								<i class="fa fa-plus"></i>
 								<span>Read More</span>
 							</a>
@@ -137,11 +137,11 @@ get_header();
 				
 			</div>
 			
-							<?  xyr_unliscroll(); ?>
+							<?php  xyr_unliscroll(); ?>
 							
 						</div>
 
-						<? get_sidebar('main');?>
+						<?php get_sidebar('main');?>
 
 					</div>
 

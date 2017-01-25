@@ -2,7 +2,7 @@
 
 <div class="page-container home-content">
 
-	<? //load_template_part( 'header','adds-970','_template'); ?>
+	<?php //load_template_part( 'header','adds-970','_template'); ?>
 
 
 	<div class="left-content align-left">
@@ -77,7 +77,7 @@
 				<?php get_sidebar('band');  ?>
 				
 				<div class="post-new-content">
-					<? 
+					<?php 
 			
 					if(have_posts()):
 					

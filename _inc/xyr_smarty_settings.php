@@ -1,4 +1,4 @@
-<?
+<?php
 
 
 
@@ -24,9 +24,9 @@ function theme_settings_page(){
 }
 
 
-function xyr_smarty_field($FieldName, $_fieldType= 'text'){
+function xyr_smarty_field($FieldName, $_fieldType = 'text'){
 	?>
-    	<input type="<?=$_fieldType;?>" name="xyr_smarty-<?=$FieldName;?>" id="<?=$FieldName;?>" value="<?php echo get_option('xyr_smarty-'.$FieldName); ?>" style="width: 300px;" />
+    	<input type="<?=$_fieldType?>" name="xyr_smarty-<?=$FieldName?>" id="<?=$FieldName?>" value="<?php echo get_option('xyr_smarty-'.$FieldName); ?>" style="width: 300px;" />
     <?php
 }
 

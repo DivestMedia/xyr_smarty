@@ -58,7 +58,7 @@ get_header();
 
 							<div class="divider nomargin-bottom"><!-- divider --></div>
 
-							<a class="size-16 font-lato" href="<?=site_url();?>"><i class="glyphicon glyphicon-menu-left margin-right-10 size-12"></i> back to <? bloginfo('name');?> homepage now!</a>
+							<a class="size-16 font-lato" href="<?=site_url();?>"><i class="glyphicon glyphicon-menu-left margin-right-10 size-12"></i> back to <?php bloginfo('name');?> homepage now!</a>
 
 						</div>
 

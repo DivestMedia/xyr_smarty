@@ -72,15 +72,15 @@ class xyr_smarty_tinypoll_Widget extends WP_Widget {
 						?>
 					
 					
-					<? if(has_post_thumbnail()) { ?>
+					<?php if(has_post_thumbnail()) { ?>
 						<a class="image-hover" href="<?php the_permalink() ?>">
 							<span class="image-hover-icon image-hover-dark">
 								<i class="fa fa-link"></i>
 							</span>
-							<? the_post_thumbnail('mid-image',array('class' => 'img-responsive'));?>
+							<?php the_post_thumbnail('mid-image',array('class' => 'img-responsive'));?>
 							
 						</a>
-					<? } ?>
+					<?php } ?>
 					
 					<div class="callout callout-dark noradius padding-10">
 
@@ -107,7 +107,7 @@ class xyr_smarty_tinypoll_Widget extends WP_Widget {
 						</div>
 					</div>
 						
-				<? 	
+				<?php 	
 				endwhile;
 				wp_reset_postdata();
 				?>

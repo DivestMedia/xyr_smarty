@@ -10,22 +10,22 @@
 						<div class="col-md-3">
 							<!-- Footer Logo -->
 							<img class="footer-logo" src="<?=get_stylesheet_directory_uri();?>/assets/logo_light.png" alt="" />
-							<? global $_xyr_smarty;?>
+							<?php global $_xyr_smarty;?>
 							<!-- Small Description -->
-							<p><? _e($_xyr_smarty['company_info']['description']);?></p>
+							<p><?php _e($_xyr_smarty['company_info']['description']);?></p>
 							<!-- Contact Address -->
 							<address>
 								<ul class="list-unstyled">
 									<li class="footer-sprite address">
-										<? 
+										<?php 
 											$_address = str_replace("\n",'<br/>',$_xyr_smarty['company_info']['address']);
 											_e( $_address);?>
 									</li>
 									<li class="footer-sprite phone">
-										<? _e('Phone',XYR_SMARTY);?>: <? _e($_xyr_smarty['company_info']['phone']);?>
+										<?php _e('Phone',XYR_SMARTY);?>: <?php _e($_xyr_smarty['company_info']['phone']);?>
 									</li>
 									<li class="footer-sprite email">
-										<a href="mailto:<? _e($_xyr_smarty['company_info']['support']);?>"><? _e($_xyr_smarty['company_info']['support']);?></a>
+										<a href="mailto:<?php _e($_xyr_smarty['company_info']['support']);?>"><?php _e($_xyr_smarty['company_info']['support']);?></a>
 									</li>
 								</ul>
 							</address>
@@ -37,7 +37,7 @@
 						<div class="col-md-2">
 
 							<!-- Links -->
-							<h4 class="letter-spacing-1"><? _e('EXPLORE',XYR_SMARTY);?> <? _e($_xyr_smarty['company_info']['name_small']);?></h4>
+							<h4 class="letter-spacing-1"><?php _e('EXPLORE',XYR_SMARTY);?> <?php _e($_xyr_smarty['company_info']['name_small']);?></h4>
 						
 							<?php if ( has_nav_menu( 'footer' ) ) :
 								wp_nav_menu( array(
@@ -152,7 +152,7 @@
 						endif; ?>
 					
 					
-						&copy; All Rights Reserved <?=date('Y');?>, <? bloginfo('name');?>
+						&copy; All Rights Reserved <?=date('Y');?>, <?php bloginfo('name');?>
 					</div>
 				</div>
 			</footer>
