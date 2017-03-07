@@ -4,9 +4,9 @@ Xyr-Smarty Core Theme
 
 
 
-@Version 	3.08
-@Date		Tuesday, February 16, 2016
-@Author		Jenner Alagao , Ralph Galindo, LJ Opleda
+## Current Version 	3.08
+Date		Tuesday, February 16, 2016
+Author		Jenner Alagao , Ralph Galindo, LJ Opleda
 
 * New: Added image hover class (.grayscale-hover-color)
 * Update: Revolution Slider to v5.2.6
@@ -18,9 +18,9 @@ Xyr-Smarty Core Theme
 
 
 
-@Version 	2.16
-@Date		Tuesday, February 16, 2016
-@Author		Jenner Alagao , Ralph Galindo, LJ Opleda
+###Version 	2.16
+Date		Tuesday, February 16, 2016
+Author		Jenner Alagao , Ralph Galindo, LJ Opleda
 
 * New: Vectorial Maps (changes: assets/css/layout.css, added: assets/plugins/jquery-vectormap , shortcode-maps-vectorial.html)
 * Update: Bootstrap to v3.3.6 (changes: replaced assets/plugins/bootstrap/ folder)
