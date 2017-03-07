@@ -35,6 +35,23 @@
 .music-album-title i.album-play.active:before {
 	display:none;
 }
+
+
+.music-album-download {
+	margin-top:10px;
+}
+.music-album-download>a {
+	float:right;
+	width:25px;
+	height: 20px;
+}
+
+
+.box-gradient.box-gray {
+	background-color: #333;
+}
+
+
 /* music player */
 #music-player {
 	color:#fff;
